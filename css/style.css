@@ -3,11 +3,12 @@
     margin: 0;
     box-sizing: border-box;
     line-height: 1.6;
-    font-family: system-ui;
+    font-family: sans-serif;
 }
 
 :root {
     --primary-color: #fff;
+    --secondary-color: #333;
 }
 
 /* General Settings */
@@ -16,20 +17,20 @@ h1 {
 }
 
 h2 {
-    font-size: 5vmin;
+    font-size: 4.2vmin;
 }
 
 h3 {
-    font-size: 5vmin;
+    font-size: 3.8vmin;
 }
 
 p {
-    font-size: 3.5vmin;
+    font-size: 3.6vmin;
 }
 
 a {
     text-decoration: none;
-    font-size: 4.7vmin;
+    font-size: 4vmin;
     color: #3300ff;
 }
 
@@ -50,10 +51,12 @@ header {
     align-items: center;
     text-align: center;
     flex-direction: column;
+    margin-top: .8em;
 }
 
 .header-h2 {
     font-weight: 600;
+    color: var(--secondary-color);
     letter-spacing: .05em;
 }
 
@@ -80,20 +83,15 @@ section {
     height: 100vh;
 }
 
+.project-p { color: var(--secondary-color)}
+
 .two, .three {
     text-align: center;
 }
 
-/* Individual Projects Color */
-
-.a-two {
-
-}
-
-
 .write {
     color: #3300ff;
-    font-size: 3.5vmin;
+    font-size: 3.6vmin;
 }
 
 @media all and (max-width: 50em) {
