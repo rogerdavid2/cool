@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style3.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Flash Cards +</h1>
+        <a href="index.html">Back</a>
+    </header>
+
+    <article class="prompt-question">
+        <button id="create" data-create>+</button>
+        <p class="info">
+            Create a new card
+        </p>
+    </article>
+
+    <article class="modal-placement">
+        <section class="modal-design is-hidden">
+            <div class="erase-modal-c">
+                <button id="erase" data-close>
+                    <p id="close-p">+</p>
+                </button>
+            </div>
+            <h3>Question</h3>
+            <textarea class="question-text textA" id="question"></textarea>
+            </div>
+            <h3>Answer</h3>
+            <textarea class="answer-text textA" id="answer"></textarea>
+            <button id="save">Save</button>
+            <div class="show-error-message hide-error">Please include values</div>
+        </section>
+    </article>
+    <section class="card-container"></section>
+    <script src="js/script3.js"></script>
+
+</html>
