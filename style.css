@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    font-family: system-ui;
+}
+
+:root {
+    --primary-color: #fff;
+}
+
+/* General Settings */
+h1 {
+    font-size: 7vmin;
+}
+
+h2 {
+    font-size: 5vmin;
+}
+
+h3 {
+    font-size: 5vmin;
+}
+
+p {
+    font-size: 3.5vmin;
+}
+
+a {
+    text-decoration: none;
+    font-size: 4.7vmin;
+    color: #3300ff;
+}
+
+/* Font Size Settings */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Header Section */
+header {
+    background-color:var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.header-h2 {
+    font-weight: 600;
+    letter-spacing: .05em;
+}
+
+.header-h3 {
+    font-weight: lighter;
+}
+
+/* Container Settings */
+.container {
+    height: 100vh;
+    justify-content: center;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    width: 100%;
+}
+
+/* Section Container */
+section {
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.two, .three {
+    text-align: center;
+}
+
+/* Individual Projects Color */
+
+.a-two {
+
+}
+
+
+.write {
+    color: #3300ff;
+    font-size: 3.5vmin;
+}
+
+@media all and (max-width: 50em) {
+    .project-p {
+        width: 70%;
+    }
+}
