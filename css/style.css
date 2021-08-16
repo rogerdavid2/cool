@@ -28,21 +28,15 @@ body {
 /* Header Section */
 header {
     background-color:var(--primary-color);
-    margin-bottom: -2rem;
     letter-spacing: .2em;
     width: 100%;
     display: flex;
     height: 70px;
     justify-content: center;
-    justify-items: center;
+    align-items: center;
     text-align: center;
 }
 
-.header-h2 {
-    z-index: 2;
-    background-color: var(--primary-color);
-    border-radius: 100%;
-}
 
 /* Section Container */
 section {
@@ -51,7 +45,7 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 60vh;
+    height: 100vh;
 }
 
 .two, .three {
@@ -60,11 +54,11 @@ section {
 
 /* Container Settings */
 .container {
-    height: 60vh;
+    height: 100vh;
     justify-content: center;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
-    width: 85%;
+    width: 100%;
 }
 
 .project {
@@ -86,6 +80,33 @@ section {
 .write {
     color: #3300ff;
     font-size: 16px;
+}
+
+/* Infinite Scroller */
+.marquee {
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #3300ff;
+}
+  
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 8s linear infinite;
+}
+  
+.marquee2 span {
+    animation-delay: 4s;
+}
+  
+@keyframes marquee {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-100%, 0);
+    }
 }
 
 @media all and (max-width: 50em) {
