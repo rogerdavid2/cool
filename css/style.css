@@ -6,6 +6,13 @@
     font-family: sans-serif;
 }
 
+/* CSS Variables */
+:root {
+    --main-color: royalblue;
+    --text-color: whitesmoke;
+    --third-color: #333;
+}
+
 /* General Settings */
 a {
     text-decoration: none;
@@ -22,15 +29,13 @@ li {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: royalblue;
+    background-color: var(--main-color);
     clip-path: circle(25px at calc(100% - 45px) 45px);
     transition: all .3s ease-in-out;
-    border: 10px solid black;
-    animation: colorChange 5s infinite;
 }
 
 .contact {
-    color: whitesmoke;
+    color: var(--text-color);
     text-align: right;
 }
 
@@ -48,9 +53,8 @@ li {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    color: #fff;
     cursor: pointer;
-    background-color: royalblue;
+    background-color: var(--main-color);
 }
 
 /* Place Navigation Items Center */
@@ -67,12 +71,13 @@ li {
 }
 
 .menu-a {
-    color:#fff;
-    font-size: 1.35em;
+    color:var(--text-color);
+    font-size: 1.2em;
     transition: .3s ease-in;
-    padding: .6em;
+    margin-bottom: 1em;
     overflow: hidden;
     transition: all .3s ease-in-out;
+    display: none;
 }
 
 /* Header Settings */ 
@@ -101,9 +106,9 @@ header {
 }
 
 .pro {
-    background:royalblue;
+    background:var(--main-color);
     padding: .8em;
-    color: #fff;
+    color: var(--text-color);
     transition: .3s ease-in;
 }
 
@@ -117,26 +122,26 @@ header {
     top:20px;
     font-size: 1.6rem;
     text-align: center;
-    background: royalblue;
-    color: whitesmoke;
+    background: var(--main-color);
+    color: var(--text-color);
     transition: .3s ease-in-out;
 }
 
 /* Settings for Index Page Cubes */
 .reveal {
-    color: royalblue;
+    color: var(--main-color);
 }
 
 .change:hover {
-    color: #333;
+    color: var(--third-color);
 }
 
 .reveal:active {
-    color: #333;
+    color: var(--third-color);
 }
 
 .header-h2:hover {
-    background: whitesmoke;
+    background: var(--text-color);
     cursor: pointer;
 }
 
@@ -146,10 +151,10 @@ header {
 }
 
 .name:hover {
-    color: #333;
+    color: var(--third-color);
 }
 
 .header-p {
     font-size: 1.2rem;
-    color: #333;
+    color: var(--third-color);
 }
