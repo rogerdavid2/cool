@@ -6,7 +6,6 @@
     font-family: sans-serif;
 }
 
-
 /* General Settings */
 a {
     text-decoration: none;
@@ -26,11 +25,17 @@ li {
     background-color: royalblue;
     clip-path: circle(25px at calc(100% - 45px) 45px);
     transition: all .3s ease-in-out;
+    border: 10px solid black;
+    animation: colorChange 5s infinite;
 }
 
+.contact {
+    color: whitesmoke;
+    text-align: right;
+}
 
-#active:checked ~ .nav {
-    clip-path: circle(75%);
+.c-f {
+    text-align: left;
 }
 
 .menu-btn {
@@ -48,21 +53,10 @@ li {
     background-color: royalblue;
 }
 
-#active:checked ~ .menu-btn {
-    background: #fff;
-    color: #4158d8;
-}
-#active:checked ~ .menu-btn i:before {
-    content: "\f00d"
-}
-
-input {
-    display: none;
-}
-
 /* Place Navigation Items Center */
 .nav ul {
     position: absolute;
+    z-index: -1;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -77,16 +71,11 @@ input {
     font-size: 1.35em;
     transition: .3s ease-in;
     padding: .6em;
-    border: 2px solid transparent;
-    transition: .3s ease-in-out;
-}
-
-.menu-a:hover {
-    border: 2px solid whitesmoke;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
 }
 
 /* Header Settings */ 
-
 header {
     position: absolute;
     top:50%;
@@ -104,18 +93,23 @@ header {
     row-gap: .3em;
 }
 
+/* Second Header Settings */
 .two {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .pro {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
     background:royalblue;
-    padding: .6em;
+    padding: .8em;
     color: #fff;
+    transition: .3s ease-in;
+}
+
+.pro:hover {
+    cursor: pointer;
+    background-color: #2d4ba7;
 }
 
 .header-h2 {
@@ -128,11 +122,16 @@ header {
     transition: .3s ease-in-out;
 }
 
+/* Settings for Index Page Cubes */
 .reveal {
     color: royalblue;
 }
 
-.reveal:hover {
+.change:hover {
+    color: #333;
+}
+
+.reveal:active {
     color: #333;
 }
 
@@ -141,18 +140,13 @@ header {
     cursor: pointer;
 }
 
-.contact {
-    color: whitesmoke;
-    text-align: right;
-}
-
-.c-f {
-    text-align: left;
-}
-
 .name {
     grid-column-start: 1;
     grid-column-end: 3;
+}
+
+.name:hover {
+    color: #333;
 }
 
 .header-p {
