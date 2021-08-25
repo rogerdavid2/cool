@@ -37,7 +37,9 @@ li {
 
 .nav-logo-h2 {
     font-weight: bold;
-    color: var(--link-color);
+    color: #fff;
+    padding: .3em;
+    background-color: var(--link-color);
 }
 
 .nav-ul {
@@ -65,6 +67,10 @@ li {
     justify-content: center;
     flex-direction: column;
     padding: var(--main-padding);
+}
+
+.oneone {
+    border-bottom: .5px solid lightgray;
 }
 
 .header-h2 {
@@ -164,9 +170,11 @@ li {
 .img_wrap {
     opacity: 0;
     margin-left: -100px;
-    //height: 240px;
-    width: 400px;
+    height: 240px;
+    width: 410px;
     transition: opacity 1.2s, margin-left 1s;
+    display: flex;
+    flex-direction: column;
 }
 
 .img_wrap.active {
@@ -198,17 +206,12 @@ li {
 }
 
 .h4-div {
-    width: 100%;
+    position: relative;
     color: #fff;
     text-align: center;
     background-color: #2d4ba7;
-    opacity: .75;
-    height: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 230px;
+    opacity: .7;
+    order: 2;
 }
 
 /* Quote Container */
@@ -294,6 +297,10 @@ footer {
 }
 
 @media all and (max-width: 50em) {
+
+    body {
+        height: 100vh;
+    }
     
     .header-p {
         width: 100%;
