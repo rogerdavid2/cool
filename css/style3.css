@@ -19,12 +19,21 @@
     --shadow: 0px 2px 3px 0 hsla(0 , 0%, 0%, 0.2);
 }
 
+.back {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
 header {
     padding: 25px;
     color: var(--third-color);
     height: 100px;
     background-color: var(--primary-color);
     animation: changeColor 7s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 @keyframes changeColor {
