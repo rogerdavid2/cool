@@ -82,11 +82,6 @@ li {
     background-color: var(--link-color);
     padding: var(--main-padding);
     color: var(--primary-color);
-    transition: .2s ease-in-out;
-}
-
-.header-a:hover {
-    background-color:  #2d4ba7;
 }
 
 .header-p {
@@ -128,11 +123,11 @@ li {
 }
 
 .g-p-div {
-    background-color: #b8dcf3;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 300px;
+    flex-direction: column;
+    height: 350px;
     max-width: 100%;
 }
 
@@ -141,6 +136,19 @@ li {
     width: 100%;
     pointer-events: none;
     object-fit: cover;
+}
+
+.pic-caption-c {
+    position: absolute;
+    color: #fff;
+    letter-spacing: .2em;
+    animation: 7s changeColor infinite;
+}
+
+@keyframes changeColor {
+    50% {
+        color: transparent;
+    }
 }
 
 .grid-bio {
