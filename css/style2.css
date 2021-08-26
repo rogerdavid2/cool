@@ -136,6 +136,7 @@ li {
     width: 100%;
     pointer-events: none;
     object-fit: cover;
+    border: 5px solid royalblue;
 }
 
 .pic-caption-c {
@@ -159,6 +160,8 @@ li {
     flex-direction: column;
     padding: var(--main-margin);
 }
+
+.grid-p { margin-top: .9em; line-height: 1.9;}
 
 /* Price Grid Settings */
 .g-three {
