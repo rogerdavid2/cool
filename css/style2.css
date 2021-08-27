@@ -354,7 +354,21 @@ footer {
 
     .img_wrap {
         width: 330px;
+        position: relative;
     }
+
+    .h4-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 60px;
+        left: 10%;
+        width: 90%;
+        height: 250px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
 }
 
 /* Animation */
