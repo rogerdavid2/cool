@@ -195,13 +195,14 @@ li {
     height: 240px;
     width: 410px;
     transition: opacity 1.2s, margin-left 1s;
+    will-change: opacity, transform;
     display: flex;
     flex-direction: column;
 }
 
 .img_wrap.active {
-    opacity: 1;
     margin-left: 0px;
+    opacity: 1;
 }
 
 .img_wrap > img {
@@ -353,22 +354,24 @@ footer {
     }
 
     .img_wrap {
-        width: 330px;
+        width: 320px;
         position: relative;
     }
 
     .h4-div {
         display: flex;
         flex-direction: column;
-        letter-spacing: .08em;
         justify-content: center;
         position: absolute;
-        top: 60px;
-        left: 10%;
-        width: 90%;
+        text-align: left;
+        padding: 4em;
+        top: 70%;
+        left: 8%;
+        width: 95%;
         opacity: 1;
-        height: 250px;
-        background-color: rgba(0, 0, 0, 0.5);
+        height: 150px;
+        color: #333;
+        background-color: #f5f5f5;
     }
 
 }
