@@ -150,6 +150,7 @@ li {
     padding: 1em;
     transform: translateY(15px);
     transition: transform 0.5s cubic-bezier(0.8, -0.3, 0.26, 1.8);
+    border-top: 2px royalblue solid;
 }
 
 .pic-caption-c:hover {
