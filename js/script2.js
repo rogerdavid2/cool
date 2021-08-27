@@ -18,3 +18,5 @@ let observer = new IntersectionObserver(setItemActive, options);
 imageItems.forEach(item => {
     observer.observe(item);
 });
+
+document.addEventListener("touchstart", function () { }, true);
