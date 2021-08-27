@@ -1,4 +1,5 @@
 let imageItems = [...document.querySelectorAll('.img_wrap')];
+let imageCaptions = [...document.querySelectorAll('.h4-div')];
 
 let options = {
     rootMargin: '0px',
@@ -18,3 +19,7 @@ let observer = new IntersectionObserver(setItemActive, options);
 imageItems.forEach(item => {
     observer.observe(item);
 });
+
+imageCaptions.forEach(div => {
+    observer.observe(div);
+})
