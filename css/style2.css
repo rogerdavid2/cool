@@ -129,6 +129,8 @@ li {
     flex-direction: column;
     height: 350px;
     max-width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 .bio-pic {
@@ -136,14 +138,23 @@ li {
     width: 100%;
     pointer-events: none;
     object-fit: cover;
-    border: 5px solid royalblue;
 }
 
 .pic-caption-c {
     position: absolute;
     color: #fff;
-    letter-spacing: .2em;
-    animation: 7s changeColor infinite;
+    bottom: -25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    transform: translateY(15px);
+    transition: transform 0.5s cubic-bezier(0.8, -0.3, 0.26, 1.8);
+}
+
+.pic-caption-c:hover {
+    cursor: pointer;
+    transform: translateY(-20px);
 }
 
 @keyframes changeColor {
