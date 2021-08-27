@@ -366,15 +366,15 @@ footer {
         justify-content: center;
         position: absolute;
         text-align: right;
-        padding: 3em;
+        padding: 2em;
         top: 70%;
-        left: 8%;
-        width: 85%;
+        left: 10%;
+        width: 70%;
         opacity: 0;
-        height: 150px;
+        height: 120px;
         color: #fff;
         background-color: rgba(0, 0, 0, 0.5);
-        transition: opacity 2s, width .7s;
+        transition: opacity 2s, width .6s;
     }
 
     .h4-div.active {
