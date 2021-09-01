@@ -1,39 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Player</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style2.css">
 </head>
 
 <body>
+    <nav class="nav">
+        <section class="nav-logo">
+            <a href="index.html" class="nav-logo-h2">RB</a>
+        </section>
 
-    <div class="player-container">
-        <div class="img-container">
-            <img src="img/cirosc-1.jpg" alt="Album Art">
-        </div>
-        <h2 id="title">Remiel</h2>
-        <h3 id="artist">cirosc</h3>
-        <audio src="music/cirosc-1.mp3"></audio>
+        <ul class="nav-ul">
+            <li class="nav-li"><a href="about.html" class="nav-a">About</a></li>
+            <li class="nav-li"><a href="price.html" class="nav-a">Projects</a></li>
+        </ul>
+    </nav>
 
-        <div class="progress-container" id="progress-container">
-            <div class="progress" id="progress"></div>
-            <div class="duration-wrapper">
-                <span id="current-time">0:00</span>
-                <span id="duration">2:34</span>
-            </div>
-        </div>
-        <div class="player-controls">
-            <i class="fas fa-backward" id="prev" title="Previous"></i>
-            <i class="fas fa-play main-button" id="play" title="Play"></i>
-            <i class="fas fa-forward" id="next" title="Next"></i>
-        </div>
 
-    </div>
-    <script src="script4.js"></script>
+    <header class="header oneone">
+        <h2 class="header-h2 animate-pop-in">
+            Hello, I am Roger
+        </h2>
+        <a href="price.html" class="header-a animate-pop-in">Here's my work</a>
+    </header>
+
+    <section class="quote-c ind-c">
+        <h2 class="quote-h3">Media</h2>
+        <em class="em">Follow me on</em>
+        <div class="quote-c-socials">
+            <ul class="socials-ul">
+                <li class="socials-li"><a href="https://github.com/rogerdavid2" class="socials-a">Github</a></li>
+                <li class="socials-li"><a href="https://dev.to/rogerdavid24" class="socials-a">Dev.to</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <section class="footer-social">
+            <h1 class="footer-h1">Contact</h1>
+            <p class="footer-p">Email: rogerdavidb57[at]gmail.com
+            </p>
+            <em class="footer-p">Made in 2021</em>
+        </section>
+    </footer>
 </body>
 
 </html>
