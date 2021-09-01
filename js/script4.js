@@ -17,28 +17,28 @@ const nextBtn = document.getElementById('next');
 const songs = [
     {
         name: 'cirosc-1',
-        displayName: 'Caliwood 137 bpm',
-        artist: 'Cirosc'
+        displayName: 'Remiel.mp3',
+        artist: 'cirosc'
     },
     {
         name: 'cirosc-2',
-        displayName: 'Giatto 97 bpm Bmaj',
-        artist: 'Cirosc'
+        displayName: 'yo.mp3',
+        artist: 'cirosc'
     },
     {
         name: 'cirosc-3',
-        displayName: 'La Casa Project',
-        artist: 'Cirosc'
+        displayName: 'moveit.mp3',
+        artist: 'cirosc'
     },
     {
         name: 'cirosc-4',
-        displayName: 'Controla 100 bpm Gmin',
-        artist: 'Cirosc'
+        displayName: 'controla.mp3',
+        artist: 'cirosc'
     },
     {
         name: 'cirosc-5',
-        displayName: 'Lodoni x Cirosc',
-        artist: 'lodoni x cirosc'
+        displayName: 'WEpop.mp3',
+        artist: 'cirosc'
     }
 ];
 
@@ -66,7 +66,7 @@ playBtn.addEventListener('click', () => (isPlaying ? pauseSong() : playSong()));
 function loadSong(song) {
     title.textContent = song.displayName;
     artist.textContent = song.artist;
-    music.src = `music/${song.name}.wav`;
+    music.src = `music/${song.name}.mp3`;
     image.src = `img/${song.name}.jpg`
 }
 
