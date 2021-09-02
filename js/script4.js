@@ -17,27 +17,52 @@ const nextBtn = document.getElementById('next');
 const songs = [
     {
         name: 'cirosc-1',
-        displayName: 'Remiel.mp3',
+        displayName: 'Remiel',
         artist: 'cirosc'
     },
     {
         name: 'cirosc-2',
-        displayName: 'yo.mp3',
+        displayName: 'Yo',
         artist: 'cirosc'
     },
     {
         name: 'cirosc-3',
-        displayName: 'moveit.mp3',
+        displayName: 'moveit',
         artist: 'cirosc'
     },
     {
         name: 'cirosc-4',
-        displayName: 'controla.mp3',
+        displayName: 'controla',
         artist: 'cirosc'
     },
     {
         name: 'cirosc-5',
-        displayName: 'WEpop.mp3',
+        displayName: 'WEpop',
+        artist: 'cirosc'
+    },
+    {
+        name: 'cirosc-6',
+        displayName: 'wawigi',
+        artist: 'cirosc'
+    },
+    {
+        name: 'cirosc-6',
+        displayName: 'wawigi',
+        artist: 'cirosc'
+    },
+    {
+        name: 'cirosc-7',
+        displayName: 'funkwav',
+        artist: 'cirosc'
+    },
+    {
+        name: 'cirosc-8',
+        displayName: 'flash',
+        artist: 'cirosc ft. lodoni'
+    },
+    {
+        name: 'cirosc-9',
+        displayName: 'WDYG',
         artist: 'cirosc'
     }
 ];
