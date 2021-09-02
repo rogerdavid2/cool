@@ -46,11 +46,6 @@ const songs = [
         artist: 'cirosc'
     },
     {
-        name: 'cirosc-6',
-        displayName: 'wawigi',
-        artist: 'cirosc'
-    },
-    {
         name: 'cirosc-7',
         displayName: 'funkwav',
         artist: 'cirosc'
@@ -63,6 +58,11 @@ const songs = [
     {
         name: 'cirosc-9',
         displayName: 'WDYG',
+        artist: 'cirosc'
+    },
+    {
+        name: 'cirosc-10',
+        displayName: 'salvame',
         artist: 'cirosc'
     }
 ];
