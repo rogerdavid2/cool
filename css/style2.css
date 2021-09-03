@@ -75,6 +75,7 @@ li {
 
 .header-h2 {
     margin-bottom: var(--main-margin);
+    font-size: 30px;
     text-align: center;
 }
 
@@ -144,7 +145,7 @@ li {
     position: absolute;
     color: #fff;
     bottom: -25px;
-    background-image: linear-gradient( 135deg, rgba(129, 255, 239, 0.50) 10%, rgba(0, 0, 0, 0.5) 100%);
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     text-align: center;
     padding: 1em;
