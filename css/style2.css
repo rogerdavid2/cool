@@ -293,6 +293,7 @@ footer {
 .footer-h1 {
     color: #333;
     font-size: 40px;
+    background-color: aliceblue;
     position: absolute;
     left: 80%;
     top: -35px;
