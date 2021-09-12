@@ -175,10 +175,10 @@ li {
 
 .grid-p { 
     margin-top: .9em; 
-    line-height:2;
+    line-height:2.5;
     background-color: aliceblue;
     padding: 1.3em;
-    box-shadow:0px 3px 4px 0 hsla(0 , 0%, 0%, 0.2);
+    //box-shadow:0px 2px 2px 0 hsla(0 , 0%, 0%, 0.2);
 }
 
 /* Price Grid Settings */
@@ -296,7 +296,13 @@ footer {
     position: absolute;
     left: 80%;
     top: -35px;
+    letter-spacing: .09em;
 }
+
+.footer-p {
+    font-size: 18px;
+}
+
 
 @media all and (max-width: 50em) {
     body {
@@ -357,7 +363,7 @@ footer {
         width: 100%;
     }
     .footer-h1 {
-        left: 50%;
+        left: 53%;
     }
 }
 
@@ -383,6 +389,7 @@ footer {
 }
 
 .header-h2-1 {
+    color: var(--link-color);
     animation-delay: .2s;
 }
 
