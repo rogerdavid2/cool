@@ -8,6 +8,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
 </head>
 
 <body>
@@ -37,14 +39,21 @@
         <a href="price.html" class="header-a animate-pop-in">Here's my work</a>
     </header>
 
-    <section class="quote-c ind-c">
-        <h2 class="quote-h3">Media</h2>
-        <em class="em"></em>
-        <div class="quote-c-socials">
-            <ul class="socials-ul">
-                <li class="socials-li"><a href="https://github.com/rogerdavid2" class="socials-a">Github</a></li>
-                <li class="socials-li"><a href="https://dev.to/rogerdavid24" class="socials-a">Dev.to</a></li>
-            </ul>
+    <section class="center">
+        <div class="share-menu">
+            <div class="share-btn">
+                <i class="fa fa-share-alt"></i>
+                <i class="fa fa-close"></i>
+            </div>
+            <div class="social-btn">
+                <i class="fa fa-github"></i>
+            </div>
+            <div class="social-btn">
+                <i class="fa fa-codepen"></i>
+            </div>
+            <div class="social-btn">
+                <p class="fa">dev</p>
+            </div>
         </div>
     </section>
 
@@ -57,6 +66,13 @@
         </section>
     </footer>
     <script src="js/transition.js"></script>
+    <script>
+        let button = document.querySelector('.share-menu');
+        function toggleMenu() {
+            document.getElementsByClassName("share-menu")[0].classList.toggle("active");
+        }
+        button.addEventListener('click', toggleMenu);
+    </script>
 </body>
 
 </html>
