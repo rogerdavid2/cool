@@ -291,7 +291,7 @@ footer {
     background-color: var(--link-color);
     color: var(--primary-color);
     position: relative;
-    padding: 3.4em;
+    padding: 3em;
 }
 
 .footer-h1 {
