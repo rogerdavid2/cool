@@ -291,7 +291,8 @@ footer {
     background-color: var(--link-color);
     color: var(--primary-color);
     position: relative;
-    padding: 3em;
+    padding: 1.5em;
+    height: 120px;
 }
 
 .footer-h1 {
@@ -308,7 +309,7 @@ footer {
 }
 
 .footer-p {
-    font-size: 19px;
+    font-size: 18px;
 }
 
 @keyframes changeBack {
