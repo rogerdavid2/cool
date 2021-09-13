@@ -177,8 +177,7 @@ li {
     margin-top: .9em; 
     line-height:2.5;
     background-color: aliceblue;
-    padding: 1.3em;
-    //box-shadow:0px 2px 2px 0 hsla(0 , 0%, 0%, 0.2);
+    padding: 1.4em;
 }
 
 /* Price Grid Settings */
@@ -247,10 +246,10 @@ li {
 
 /* Quote Container */
 .quote-c {
-    height: 340px;
+    height: 500px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     text-align: center;
 }
 
@@ -263,10 +262,15 @@ li {
     padding: var(--main-padding);
 }
 
+.quote-h3 {
+    font-size: 27px;
+    letter-spacing: .09em;
+}
+
 .socials-ul {
     display: flex;
     justify-content: space-evenly;
-    column-gap: .3em;
+    column-gap: .1em;
 }
 
 .socials-li > a {
@@ -287,23 +291,31 @@ footer {
     background-color: var(--link-color);
     color: var(--primary-color);
     position: relative;
-    padding: 3em;
+    padding: 3.4em;
 }
 
 .footer-h1 {
     color: #333;
-    font-size: 40px;
+    font-size: 28px;
+    padding: .2em;
     background-color: aliceblue;
     position: absolute;
     left: 80%;
-    top: -35px;
+    top: -45px;
+    z-index: -2;
     letter-spacing: .09em;
+    animation: changeBack 5s ease-in-out infinite;
 }
 
 .footer-p {
-    font-size: 18px;
+    font-size: 19px;
 }
 
+@keyframes changeBack {
+    50% {
+        color: var(--link-color);
+    }
+}
 
 @media all and (max-width: 50em) {
     body {
@@ -364,7 +376,7 @@ footer {
         width: 100%;
     }
     .footer-h1 {
-        left: 53%;
+        left: 60%;
     }
 }
 
