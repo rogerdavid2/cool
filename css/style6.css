@@ -1,0 +1,132 @@
+/* Image Gallery Grid Styling */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 200px 300px;
+    gap: 1em;
+    width: 80vw;
+    margin: 10px auto 80px;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0;
+}
+
+.image.active {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+.image:hover {
+    cursor: zoom-in;
+}
+
+/* Main Modal overylay, Position fixed to cover whole screen*/
+.overlay {
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed; /* Must place first in HTML File, Fixed to cover whole screen from top */
+        left: 0%;
+        right: 0;
+        bottom: 0;
+        top: 0;
+    height: 100vh;
+    width: 100%;
+    transition: 500ms ease-in-out;
+    opacity: 0;
+    z-index: -1; /* Hides gallery */
+}
+
+.overlay.active:hover {
+    cursor: pointer;
+}
+
+/* Center elements inside modal when open is activated */
+.overlay.active {
+    z-index: 3; /* Allows it to come infront */
+    opacity: 1;
+    height: 100vh; 
+    width: 100%; 
+}
+  
+/* Inner Modal Overlay style*/
+.overlay-inner {
+    width: 350px;
+    height: 340px;
+    pointer-events: none;
+}
+
+/* Styling for each grabbed picture */
+.overlayImage {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+  
+/* Close button style */
+.close {
+    position: absolute;
+        top: 10vh;
+        right: 10%;
+    font-size: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 2px;
+    background: black;
+    color: #fff;
+    transition: 0.5s ease-in-out;
+}
+
+.close:hover {
+    cursor: pointer;
+    background: lightgray;
+    color: black;
+}
+
+#btn1 {
+    position: absolute;
+        top: 50vh;
+        left: 10%;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 2px;
+    color: grey;
+    border: none;
+    transition: .3s ease-in;
+    z-index:10;
+}
+
+#btn2 {
+    position: absolute;
+        top: 50vh;
+        right: 10%;
+    background-color:rgba(0, 0, 0, 0.7);
+    font-size: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 2px;
+    color: grey;
+    border: none;
+    transition: .3s ease-in;
+    z-index: 3;
+}
+
+#btn1:hover{cursor: pointer;color: #fff;}
+
+#btn2:hover{ cursor: pointer; color: #fff;}
+
+/* Media query */
+@media screen and (max-width: 60em) {
+    .gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
