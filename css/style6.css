@@ -56,7 +56,7 @@ body {
 }
 
 .logo-nav {
-    color: var(--overlay-link);
+    color: var(--overlay-bg);
     font-size: 25px;
     font-weight: bold;
 }
@@ -64,7 +64,7 @@ body {
 .close-1 {
     font-size: 30px;
     transition: .3s ease-in-out;
-    color: var(--overlay-link);
+    color: var(--overlay-bg);
 }
 
 .close-1:hover {
@@ -96,7 +96,6 @@ body {
 
 .menu-toggle:hover span {
     width: 100%;
-    opacity: 0.5;
     transition: 0.5s;
 }
 
@@ -107,9 +106,10 @@ body {
         top: -100vh; /* Hides menu ontop*/
     width: 100%;
     height: 100vh;
-    background-color: var(--overlay-bg);
+    background-color: var(--bg);
     transition: 0.2s;
     z-index: 5;
+    color: red;
 }
 
 /*** Reveal Overlay ***/
@@ -135,7 +135,7 @@ body {
     font-size: 1.3rem;
     transition: 0.5s;
     opacity: 0;
-    color: var(--overlay-link);
+    color:var(--overlay-bg);
 }
 
 .nav-link.active {
@@ -144,7 +144,7 @@ body {
 }
 
 .nav-link.active:hover {
-    color: black;
+    color: #fff;
     left: 10%;
     transition: 0.5s;
 }
