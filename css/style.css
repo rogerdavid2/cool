@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    line-height: 1.6;
+    line-height: 1.7;
     -webkit-text-size-adjust: none;
     -webkit-font-smoothing: antialiased;
     overscroll-behavior: none;
@@ -20,7 +20,7 @@
     --h3-fs: 2rem;
     --h4-fs: 1.8rem;
     --h5-fs: 1.6rem;
-    --p-fs: 1rem;
+    --p-fs: 1.2rem;
 }
 
 a {
