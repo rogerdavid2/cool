@@ -11,7 +11,7 @@ var isScrolling = false;
 
 let current = 0;
 let target = 0;
-let ease = 0.075;
+let ease = 0.1;
 
 function setDocumentHeight() {
     document.body.style.height = `${scrollContainer.getBoundingClientRect().height}px`;
