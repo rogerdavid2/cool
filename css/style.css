@@ -24,6 +24,7 @@
     --p-fs: 1.2rem;
 }
 
+
 a {
     text-decoration: none;
 }
@@ -223,10 +224,10 @@ section {
   
 img {
     position: relative;
-     width: 25vw;
+     width: 29vw;
     filter: grayscale(100%);
     z-index: 5;
-    height: 200px;
+    height: 220px;
     will-change: transform;
     background: var(--main-c);
     mix-blend-mode: difference;
@@ -293,11 +294,14 @@ img {
 
     .nav-link {
         color: #333;
+        font-weight: bold;
         border: 2px solid #333;
         border-radius: 100%;
-        width: 50px;
+        width: 51px;
         text-align: center;
         height: 50px;
+        position: relative;
+        bottom: 25%;
         mix-blend-mode: difference;
         background-color: var(--main-text-color);
     }
