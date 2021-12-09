@@ -7,78 +7,86 @@
     <title>Roger's Portfolio</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style2.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="con">
-        <div class="transition">
-            <div class="cover cover1">Thanks</div>
-            <div class="cover cover2">for</div>
-            <div class="cover cover3">visiting :)</div>
-        </div>
-    </div>
-    <nav class="nav">
-        <section class="nav-logo">
-            <a href="index.html" class="nav-logo-h2">RB</a>
-        </section>
-
-        <ul class="nav-ul">
-            <li class="nav-li"><a href="about.html" class="nav-a-1">About</a></li>
-            <li class="nav-li"><a href="price.html" class="nav-a">Projects</a></li>
-        </ul>
-    </nav>
-
-
-    <header class="header oneone">
-        <h2 class="header-h2 animate-pop-in">
-            Hello, I am Roger
-        </h2>
-        <a href="price.html" class="header-a animate-pop-in">Here's my work</a>
-    </header>
-
-    <section class="center">
-        <div class="share-menu">
-            <div class="share-btn">
-                <i class="fa fa-share-alt"></i>
-                <i class="fa fa-close"></i>
-            </div>
-            <div class="social-btn">
-                <a href="https://github.com/rogerdavid2" class="nav-a-1">
-                    <i class="fa fa-github"></i>
-                </a>
-            </div>
-            <div class="social-btn">
-                <a href="https://codepen.io/rogerben24" class="nav-a-1">
-                    <i class="fa fa-codepen"></i>
-                </a>
-            </div>
-            <div class="social-btn">
-                <a href="https://dev.to/rogerdavid24" class="nav-a-1">
-                    <i class="fa">d.to</i>
-                </a>
-            </div>
-        </div>
+    <section class="overlay-intro">
+        <h1>Custom Web Design</h1>
     </section>
 
-    <footer>
-        <section class="footer-social">
-            <h1 class="footer-h1">Contact</h1>
-            <p class="footer-p">Email: rogerdavidb57[at]gmail.com
-            </p>
-            <em class="footer-p">© Made in 2021</em>
-        </section>
-    </footer>
-    <script src="js/transition.js"></script>
-    <script>
-        let button = document.querySelector('.share-menu');
-        function toggleMenu() {
-            document.getElementsByClassName("share-menu")[0].classList.toggle("active");
-        }
-        button.addEventListener('click', toggleMenu);
-    </script>
+    <div class="overlay"></div>
+
+    <main>
+        <nav class="nav-bar">
+            <button class="nav-link">[R]</button>
+            <ul>
+                <button class="nav-link2">&#x2193;</button>
+            </ul>
+        </nav>
+
+        <div class="scroll-container">
+            <section class="s s1">
+                <header class="s-header" id="s1">
+                    <h1>Roger B</h1>
+                    <h2>Web Developer</h2>
+                </header>
+            </section>
+
+
+            <section class="s s2" id="s2">
+                <div class="s-about">
+                    <div class="about-t">
+                        <h2>About</h2>
+                    </div>
+
+                    <div class="about-p">
+                        <p>
+                            Hello, thank you for visiting my site! <br><br>
+                            I develop fast, usable, and custom tailored websites using
+                            JavaScript and CSS. This allows me to captivate creative ideas
+                            on the internet. <br><br>
+                            Feel free to check out my projects below!
+                            <br><br>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="projects" id="s3">
+                <div class="proj-title sticky">
+                    <h1>PROJECTS</h1>
+                </div>
+                <div class="project-grid">
+                    <a href="complex.html" class="link-img">
+                        <div class="project-item">
+                            <img src="img/1.jpg" alt="Photgraphy website">
+                        </div>
+                    </a>
+                    <a href="music.html" class="link-img">
+                        <div class="project-item">
+                            <img src="img/2.jpg" alt="An Image">
+                        </div>
+                    </a>
+                    <a href="flash.html" class="link-img">
+                        <div class="project-item">
+                            <img src="img/3.jpg" alt="Flash Card Website">
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <section class="s s4" id="s42">
+                <div class="s-footer">
+                    <h3 id="c">Let's Work Together</h3>
+                    <p id="mail">rogerdavidb57[at]gmail.com</p>
+                </div>
+            </section>
+        </div>
+
+    </main>
+    <script src="js/script.js"></script>
+    <script src="js/intro.js"></script>
 </body>
 
 </html>
