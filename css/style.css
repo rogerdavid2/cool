@@ -16,7 +16,7 @@
     --overlay-intro: #171717;
     --overlay-intro-t: seashell;
     --main-text-color: seashell;
-    --h1-fs: 2.6rem;
+    --h1-fs: 2.8rem;
     --h2-fs: 2.4rem;
     --h3-fs: 2rem;
     --h4-fs: 1.8rem;
@@ -172,7 +172,8 @@ section {
 
 .s-about {
     color: var(--main-text-color);
-    margin: 20px;
+    margin: 35px;
+    text-align: center;
     position: relative;
         top: 30%;
     height: 300px;
@@ -196,47 +197,50 @@ section {
 }
 
 /* PROJECTS */
-.projects {
+.sticky {
     position: relative;
-    height: 250vh;
+    height: 230vh;
+}
+
+.sticky2 {
+    position: relative;
 }
   
-.proj-title {
+.sticky2,.overlay-p {
     position: absolute;
-       top: 0%;
-       width: 100%;
-       height: 50%;
-    z-index: 2;
-    background: transparent;
-}
-  
-.proj-title h1 {
-    position: absolute;
-        top: 30%;
-        left: 50%;
-    font-size: var(--h1-fs);
-    color: red;
-    transform: translate(-50%, -50%);
+       top: 0;
+       left: 0;
+    width: 100%;
+    height: 100%;
     will-change: transform;
-    color: var(--main-text-color);
+}
+
+.stick {
+    font-size: var(--h1-fs);
+    color:var(--main-text-color);
     mix-blend-mode: difference;
+    position: sticky;
+    position: -webkit-sticky;
+        top: 45vh;
+    text-align: center;
+    padding: 50px;
+    z-index: 2;
+    letter-spacing: 5px;
+    will-change: transform;
+    background-color: transparent;
 }
   
 img {
     position: relative;
-     width: 29vw;
+     width: 30vw;
     filter: grayscale(100%);
-    z-index: 5;
-    height: 220px;
+    z-index: 4;
+    height: 230px;
     will-change: transform;
     background: var(--main-c);
     mix-blend-mode: difference;
 }
-
-.img-overlay {
-    position: absolute;
-}
-
+ 
 .project-grid {
     position: absolute;
         top: 5%;
@@ -256,7 +260,7 @@ img {
     justify-content: center;
 }
   
-/* Can get a taller height */
+/* Footer Section */
 .s-footer {
     position: relative;
         top: 30%;
