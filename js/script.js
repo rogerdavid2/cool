@@ -5,13 +5,11 @@ const aboutS = document.querySelector('.s-about');
 
 const projectsSection = document.querySelector('.projects');
 const projectTitle = document.querySelector('.proj-title');
-
-
 var isScrolling = false;
 
 let current = 0;
 let target = 0;
-let ease = 0.1;
+let ease = 0.095;
 
 function setDocumentHeight() {
     document.body.style.height = `${scrollContainer.getBoundingClientRect().height}px`;
@@ -30,15 +28,6 @@ function animate() {
 }
 
 function animateProjects() {
-    let { top, height } = projectsSection.getBoundingClientRect();
-    if (top <= 0 && top >= -(height * 0.5)) {
-        projTop = -top;
-    } else if (top > 0) {
-        projTop = 0
-    } else {
-        projTop = height * 0.5
-    }
-    projectTitle.style.transform = `translate3d(0, ${projTop}px,0)`;
     for (let i = 0; i < projectImages.length; i++) {
         let { top } = projectImages[i].parentElement.getBoundingClientRect();
         if (i % 2 == 0) {
@@ -56,7 +45,6 @@ function throttle(animate, time) {
             animate();
             isScrolling = false;
         }, time)
-        console.log(isScrolling);
     }
     return;
 }
