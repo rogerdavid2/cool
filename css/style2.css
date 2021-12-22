@@ -10,6 +10,7 @@
 	display: none;
 }
 
+/**** GENERAL SETTINGS ***********/
 :root {
 	--main-bg-color: #171717;
     --main-text-color: whitesmoke;
@@ -43,7 +44,7 @@ a {
     text-decoration: none;
 }
 
-/* Menu TOGGLE BUTTON */
+/* MENU TOGGLE BUTTON ************/
 .nav {
     color: var(--main-text-color);
 }
@@ -139,6 +140,9 @@ h1 {
 	opacity: 0;
 	pointer-events: none;
 	transition: 0.5s;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .menu.active {
@@ -147,9 +151,7 @@ h1 {
 }
 
 .links {
-	position: absolute;
-	    bottom: 2%;
-	    left: 2%;
+    margin: 3em;
 	height: 200px;
 }
 
@@ -402,7 +404,7 @@ main {
 }
 
 .transition.slide .cover1 {
-    background-color: whitesmoke;
+    background-color: var(--sticky-nts-bg);
     animation: slide 0.3s ease-in-out forwards;
     color: var(--main-bg-color);
 }
