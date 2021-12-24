@@ -88,7 +88,7 @@ let oLay = document.querySelectorAll('.overlay');
 let aboutT = document.querySelectorAll('.intro');
 
 let options = {
-    rootMargin: '100px',
+    rootMargin: '0px',
     threshold: 0
 }
 
