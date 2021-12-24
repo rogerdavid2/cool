@@ -84,12 +84,12 @@ init()
 
 /* Intersection Observer */
 let ob = document.querySelectorAll('.ob');
-let pics = document.querySelectorAll('.pic');
+let oLay = document.querySelectorAll('.overlay');
 let aboutT = document.querySelectorAll('.intro');
 
 let options = {
-    rootMargin: '0px',
-    threshold: .2
+    rootMargin: '100px',
+    threshold: 0
 }
 
 let setItemActive = (entries) => {
@@ -107,7 +107,7 @@ ob.forEach((item) => {
     observer.observe(item)
 })
 
-pics.forEach(item => {
+oLay.forEach(item => {
     observer.observe(item);
 })
 
