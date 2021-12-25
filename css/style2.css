@@ -33,8 +33,6 @@ body {
   overscroll-behavior: none;
 }
 
-
-
 /* MENU TOGGLE BUTTON ************/
   .menu-tog {
     position: fixed;
@@ -69,6 +67,7 @@ body {
     transform: rotate(-45deg);
   }
   
+  /* Fixed Header */
   .header {
     position: fixed;
     top: 2%;
@@ -92,6 +91,7 @@ body {
     line-height: 20px;
   }
   
+  /* Wrap to animate */
   .wrap {
     position: relative;
     display: block;
@@ -113,6 +113,7 @@ body {
     transform: translateY(0);
   }
   
+  /* Overlay Menu */
   .menu {
     position: fixed;
     top: 0;
@@ -165,6 +166,7 @@ body {
     font-size: 12px;
   }
   
+  /* Fixed main section */
   main {
     position: fixed;
     top: 0;
@@ -174,6 +176,7 @@ body {
     z-index: 0;
   }
   
+  /* Absoulte Scroll section */
   .scrollable {
     position: absolute;
     width: 100%;
@@ -182,6 +185,7 @@ body {
     will-change: transform;
   }
   
+  /* Relative content section */
   .content {
     position: relative;
     width: 100%;
@@ -191,13 +195,15 @@ body {
     position: relative;
     height: 50vh;
   }
+
+  .img-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
   
   .img-1 {
-    position: absolute;
-    top: 5%;
-    left: 2%;
-    width: 40%;
-    height: 90%;
+    grid-area: 1 / 1 / 2 / 2;
+    margin: 0.6em;
   }
   
   .proj-info-1 {
@@ -211,11 +217,8 @@ body {
   }
   
   .img-2 {
-    position: absolute;
-    top: 20%;
-    right: 2%;
-    width: 30%;
-    height: 70%;
+    grid-area: 1 / 2 / 2 / 3;
+    margin: 0.6em;
   }
   
   .proj-info-2 {
@@ -229,11 +232,7 @@ body {
   }
   
   .img-3 {
-    position: absolute;
-    top: 10%;
-    right: 2%;
-    width: 20%;
-    height: 80%;
+        grid-area: 1 / 2 / 2 / 3;
   }
   
   .proj-info-3 {
@@ -363,7 +362,8 @@ body {
 /****** SLIDER SECTION **********/
 .slider {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    height: 60vh;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .mission-d {
@@ -373,8 +373,12 @@ body {
     color: var(--main-text-color);
 }
 
+.mission {
+    margin: 0.7em;
+}
+
 .card4 {
-    grid-area: 1 / 1 / 2 / 2;
+    grid-column: 1 / span 2;
     position: relative;
     overflow: hidden;
 }
@@ -452,5 +456,9 @@ body {
 
     .more {
         font-size: 1.66em;
+    }
+
+    .slider {
+        height: 40vh;
     }
 }
