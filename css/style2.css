@@ -323,7 +323,7 @@ main {
         left: 0;
     height: 100%;
     width: 100%;
-    background-color: gray;
+    background-color: lightgrey;
     opacity: 1;
     transform: translateY(0%);
     transition: 1.9s cubic-bezier(1, 0, 0.1, 1);
@@ -377,7 +377,7 @@ main {
 /****** SLIDER SECTION **********/
 .slider {
     display: grid;
-    padding: 2rem;
+    padding:2rem;
     grid-template-columns: 1fr 1fr;
 }
 
@@ -389,7 +389,7 @@ main {
 }
 
 .card4 {
-    grid-area: 1 / 1 / 2 / 2;
+   grid-area: 1 / 1 / 2 / 2;
     position: relative;
     overflow: hidden;
 }
@@ -472,7 +472,7 @@ main {
 /* DEFINED GRID */
 .img-section {
 	position: relative;
-	height: 40vh;
+	height: 50vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr 1fr;
@@ -497,6 +497,11 @@ main {
     grid-row: 2 / span 2;
     grid-column: 2 / 4;
     margin: 0.6em;
+}
+
+.card4 {
+    grid-column: 1 / span 2;
+    margin-left: -2em;
 }
 
 
