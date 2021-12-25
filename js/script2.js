@@ -2,6 +2,7 @@ const scrollable = document.querySelector('.scrollable');
 const content = document.querySelector('.content');
 const imgSections = [...document.querySelectorAll('.img-section')];
 const images = [...document.querySelectorAll('.img')];
+
 images.forEach((image, idx) => {
     image.style.backgroundImage = `url(./img2/${idx + 1}.jpeg)`
 })
@@ -21,7 +22,6 @@ if (!isMobile) {
 }
 
 const wraps = [...document.querySelectorAll('.wrap')];
-console.log(wraps)
 const menuTog = document.querySelector('.menu-tog');
 const menu = document.querySelector('.menu');
 const menuWraps = [...document.querySelectorAll('.menu-wrap')];
@@ -31,7 +31,6 @@ function init() {
     document.body.style.height = `${content.getBoundingClientRect().height}px`;
 }
 
-window.addEventListener('resize', init);
 menuTog.addEventListener('click', toggleMenu)
 
 function displayWraps() {
@@ -88,12 +87,9 @@ function toggleWrap(wrap, active) {
 
 let target = 1;
 let reverse = false;
-
 document.addEventListener('click', () => reverse = !reverse)
-
 function scroll() {
     target = window.scrollY;
-
     if (!isMobile) {
         if (target <= 0) {
             target = (content.offsetHeight / 2) - 1;
@@ -103,7 +99,6 @@ function scroll() {
             window.scrollTo(0, target);
         }
     }
-
     if (reverse) {
         target--
     } else {
@@ -114,12 +109,23 @@ function scroll() {
     requestAnimationFrame(scroll)
 }
 
-
 displayWraps()
 init()
 
-document.addEventListener('DOMContentLoaded', () => {
+const link = document.querySelector('.one');
+const transition = document.querySelector('.transition');
 
+link.addEventListener('click', function (e) {
+    e.preventDefault();
+    transition.classList.add('slide');
+    setTimeout(() => {
+        window.location = link.href;
+    }, 900)
+})
+
+
+/* DOMContentLoaded */
+document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         window.scrollTo(0, 1);
     }, 200)

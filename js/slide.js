@@ -78,10 +78,6 @@ link.addEventListener('click', function (e) {
     }, 900)
 })
 
-
-displayWraps()
-init()
-
 /* Intersection Observer */
 let ob = document.querySelectorAll('.ob');
 let oLay = document.querySelectorAll('.overlay');
@@ -89,7 +85,7 @@ let aboutT = document.querySelectorAll('.intro');
 let car = document.querySelectorAll('.carousel')
 
 let options = {
-    rootMargin: '10px',
+    rootMargin: '-10px',
     threshold: 0.0
 }
 
@@ -119,3 +115,7 @@ aboutT.forEach((item) => {
 car.forEach((item) => {
     observer.observe(item);
 })
+
+
+displayWraps()
+init()
