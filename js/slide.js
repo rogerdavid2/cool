@@ -82,6 +82,7 @@ link.addEventListener('click', function (e) {
 let ob = document.querySelectorAll('.ob');
 let oLay = document.querySelectorAll('.overlay');
 let aboutT = document.querySelectorAll('.intro');
+let pictures = document.querySelectorAll('.pic');
 let car = document.querySelectorAll('.carousel')
 
 let options = {
@@ -101,6 +102,10 @@ let setItemActive = (entries) => {
 let observer = new IntersectionObserver(setItemActive);
 
 ob.forEach((item) => {
+    observer.observe(item);
+})
+
+pictures.forEach((item) => {
     observer.observe(item)
 })
 
