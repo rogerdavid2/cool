@@ -86,10 +86,11 @@ init()
 let ob = document.querySelectorAll('.ob');
 let oLay = document.querySelectorAll('.overlay');
 let aboutT = document.querySelectorAll('.intro');
+let car = document.querySelectorAll('.carousel')
 
 let options = {
-    rootMargin: '0px',
-    threshold: 0
+    rootMargin: '10px',
+    threshold: 0.0
 }
 
 let setItemActive = (entries) => {
@@ -112,5 +113,9 @@ oLay.forEach(item => {
 })
 
 aboutT.forEach((item) => {
+    observer.observe(item);
+})
+
+car.forEach((item) => {
     observer.observe(item);
 })
