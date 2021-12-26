@@ -393,7 +393,42 @@ body {
 /***** Carousel Section ****/
 .carousel {
     background-color: var(--sticky-nts-bg);
-    height: 70vh;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    max-width: 360px;
+    height: 400px;
+    background-color: whitesmoke;
+}
+
+.car-s {
+    padding: 1rem;
+}
+
+.images-list {
+    display: flex;
+    gap: 1.2rem;
+    overflow-x: auto;
+    scroll-snap-type: x;
+    padding-bottom: 30px;
+}
+
+.text {
+    text-align: center;
+    color: #333;
+    letter-spacing: 0.1rem;
+}
+
+.c-img {
+    scroll-snap-align: center;
+    flex: 0 0 150px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
 }
 
 
