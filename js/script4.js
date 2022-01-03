@@ -26,10 +26,11 @@ function closeMenu() {
     })
 }
 
+
 window.addEventListener('DOMContentLoaded', function (e) {
     images.forEach((image, idx) => {
         setTimeout(() => {
             image.classList.add('active');
-        }, idx * 100)
+        }, idx * 130)
     })
 })
