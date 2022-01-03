@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-    line-height: 1.8;
+    line-height: 1.7;
 }
 
 /* General Settings */
@@ -32,11 +32,11 @@ body {
 
 /* Header Settings */
 .header-container {
-    height: 100px;
-    width: 100%;
+    height: 90px;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    width: 100%;
     background-color: var(--bg);
 }
 
@@ -107,7 +107,7 @@ body {
         left: 0;
         top: -100vh; /* Hides menu ontop*/
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: var(--overlay-bg);
     transition: 0.2s;
     z-index: 5;
@@ -115,7 +115,10 @@ body {
 
 /*** Reveal Overlay ***/
 .menu.active {
+    position: fixed;
     top: 0;
+    left: 0;
+    bottom: 0;
     transition: 0.2s;
 }
 
@@ -125,7 +128,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 340px;
+    height: 320px;
 }
 
 .nav-link {
@@ -164,10 +167,19 @@ body {
 .about-container {
     color: var(--bg-link);
     min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
 }
 
 .about-container-a {
-    margin: 6em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 500px;
+    border: 2px solid whitesmoke;
+    padding: 0.9em;
 }
 
 /******************** Image Gallery Grid Styling */
@@ -175,8 +187,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 360px 320px 280px 240px;
-    gap: 1em;
-    width: 80vw;
+    gap: 0.6em;
     margin: 10px auto 80px;
 }
 
@@ -197,21 +208,26 @@ body {
     cursor: zoom-in;
     opacity: 0;
     transition: all 0.5s;
+    transform: translateY(7px);
 }
 
 .gallery-img.active {
     opacity: 1;
+    transform: translateY(0px);
 }
 
 /* Lightbox Modal Overlay */
 .lightbox-modal {
     background: rgba(0, 0, 0, 0.9);
+    border: 3px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
         top: 0;
         left: 0;
+        right: 0;
+        bottom: 0;
     width: 100%;
     height: 100%;
     transform: scale(0.9);
@@ -243,8 +259,8 @@ button:focus {
 .btn {
     background-color: #fff;
     color: #333;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     transition: 0.3s ease-in;
     border: none;
     position: absolute;
@@ -257,17 +273,17 @@ button:focus {
 }
 
 .close {
-    top: 10vh;
+    top: 10%;
     right: 10%;
 }
 
 #left {
-    top: 50vh;
+    top: 50%;
     left: 10%;
 }
 
 #right {
-    top: 50vh;
+    top: 50%;
     right: 10%;
 }
 
@@ -286,9 +302,26 @@ button:focus {
 /* Media query */
 @media screen and (max-width: 60em) {
     .gallery-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(8, 300px)
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(8, 150px)
     }
+
+    #two {
+        grid-area: 1 / 2 / 3 / 3;
+    }
+
+    #three {
+        grid-area: 2 / 1 / 4 / 2;
+    }
+
+    #four {
+        grid-area: 4 / 1 / 6 / 2;
+    }
+
+    #five {
+        grid-area: 5 / 2 / 7 / 3;
+    }
+
     .lightbox-img {
         width: 330px;
         height: 300px;
