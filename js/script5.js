@@ -3,7 +3,7 @@ let menuClose = document.querySelector('.menu-close');
 let menu = document.querySelector('.menu');
 
 let navLinks = Array.from(document.querySelectorAll('.nav-link'));
-let images = Array.from(document.querySelectorAll('.image'));
+let images = Array.from(document.querySelectorAll('.gallery-img'));
 
 menuToggle.addEventListener('click', openMenu);
 menuClose.addEventListener('click', closeMenu);
