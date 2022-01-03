@@ -373,14 +373,12 @@ body {
 }
 
 .mission-d {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    background-color: aqua;
     color: var(--main-text-color);
 }
 
 .mission {
-    margin: 0.7em;
 }
 
 .card4 {
