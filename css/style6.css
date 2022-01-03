@@ -18,8 +18,8 @@ a {
 :root {
     --bg: #171717;
     --bg-link: #fff;
-    --overlay-bg: whitesmoke;
-    --overlay-link: #333;
+    --overlay-bg: #171717;
+    --overlay-link: whitesmoke;
 }
 
 h2,h3,h4 {
@@ -56,15 +56,16 @@ body {
 }
 
 .logo-nav {
-    color: var(--overlay-bg);
+    color: var(--overlay-link);
     font-size: 25px;
     font-weight: bold;
 }
 
 .close-1 {
-    font-size: 30px;
+    font-size: 25px;
+    border: none;
     transition: .3s ease-in-out;
-    color: var(--overlay-bg);
+    color: var(--overlay-link);
 }
 
 .close-1:hover {
@@ -96,6 +97,7 @@ body {
 
 .menu-toggle:hover span {
     width: 100%;
+    opacity: 0.5;
     transition: 0.5s;
 }
 
@@ -106,10 +108,9 @@ body {
         top: -100vh; /* Hides menu ontop*/
     width: 100%;
     height: 100vh;
-    background-color: var(--bg);
+    background-color: var(--overlay-bg);
     transition: 0.2s;
     z-index: 5;
-    color: red;
 }
 
 /*** Reveal Overlay ***/
@@ -135,7 +136,7 @@ body {
     font-size: 1.3rem;
     transition: 0.5s;
     opacity: 0;
-    color:var(--overlay-bg);
+    color: var(--overlay-link);
 }
 
 .nav-link.active {
@@ -144,7 +145,7 @@ body {
 }
 
 .nav-link.active:hover {
-    color: #fff;
+    color: seashell;
     left: 10%;
     transition: 0.5s;
 }
@@ -161,218 +162,135 @@ body {
 
 /***** ABOUT PAGE STYLING ******/
 .about-container {
-    color: var(--overlay-bg);
-    display: grid;
-    height: 530px;
-    grid-template-columns: 1fr 1fr;
-    overflow: hidden;
+    color: var(--bg-link);
+    min-height: 600px;
 }
 
 .about-container-a {
-    grid-area: 1 / 1 / 2 / 2;
-    display: flex;
-    padding: 3em;
-    display: flex;
-    flex-direction: column;
+    margin: 6em;
 }
 
-.container {
-    position: relative;
-    background-color:var(--bg);
-}
-
-.container-overlay {
-    position: absolute;
-    bottom: 0%;
-    left: 0;
-    right: 0;
-    background-color:var(--bg);
-    width: 100%;
-    height: 100%;
-    transform: translateY(530px);
-    padding: 4em;
-    animation: curtainY 1s ease-in-out;
-    z-index: 4;
-}
-
-.image-c {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    opacity: 1;
-    animation: opaque 1.6s ease-in-out;
-}
-
-/* Animations */
-@keyframes curtainY {
-    0% {
-        transform: translateY(0px);
-    }
-}
-
-@keyframes opaque {
-    0% {
-        opacity: 0;
-    }
-}
-
-@media only screen and (max-width: 800px) {
-    .about-container {
-        grid-template-columns: 1fr;
-        height: auto;
-    }
-    .about-container-a {
-        padding: 2em;
-    }
-}
-/* Image Gallery Grid Styling */
-.gallery {
+/******************** Image Gallery Grid Styling */
+.gallery-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 360px 320px 280px;
+    grid-template-rows: 360px 320px 280px 240px;
     gap: 1em;
     width: 80vw;
     margin: 10px auto 80px;
 }
 
-.image {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    opacity: 0;
+/* Gallery Container */
+.gallery-container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
 }
 
-.image.active {
-    opacity: 1;
+/* Gallery Images */
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 6px rgb(0, 0, 0, 0.5);
+    cursor: zoom-in;
+    opacity: 0;
     transition: all 0.5s;
 }
 
-.image:hover {
-    cursor: zoom-in;
+.gallery-img.active {
+    opacity: 1;
 }
 
-/* Main Modal overylay, Position fixed to cover whole screen*/
-.overlay {
+/* Lightbox Modal Overlay */
+.lightbox-modal {
     background: rgba(0, 0, 0, 0.9);
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
-    position: fixed; /* Must place first in HTML File, Fixed to cover whole screen from top */
-        left: 0%;
-        right: 0;
-        bottom: 0;
+    align-items: center;
+    position: fixed;
         top: 0;
-    height: 100vh;
+        left: 0;
     width: 100%;
-    transition: 500ms ease-in-out;
+    height: 100%;
+    transform: scale(0.9);
+    transition: 500ms;
     opacity: 0;
-    transform: scale(0.8);
-    z-index: -1; /* Hides gallery */
-}
-
-.overlay.active:hover {
-    cursor: pointer;
-}
-
-/* Center elements inside modal when open is activated */
-.overlay.active {
-    transform: scale(1.0);
-    z-index: 3; /* Allows it to come infront */
-    opacity: 1;
-    height: 100vh; 
-    width: 100%; 
-}
-  
-/* Inner Modal Overlay style*/
-.overlay-inner {
-    width: 350px;
-    height: 340px;
+    z-index: -1;
     pointer-events: none;
 }
 
-/* Styling for each grabbed picture */
-.overlayImage {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+/* Add and remove css class directly from previous css defined class */
+.lightbox-modal.active {
+    pointer-events: all;
+    transform: scale(1);
+    z-index: 2;
+    opacity: 1;
 }
-  
-/* Close button style */
-.close {
+
+.lightbox-img {
+    width: 60%;
+    height: 400px;
+    object-fit: cover;
+    transition: all 500ms;
+}
+
+button:focus {
+    outline: none;
+}
+
+.btn {
+    background-color: #fff;
+    color: #333;
+    width: 30px;
+    height: 30px;
+    transition: 0.3s ease-in;
+    border: none;
     position: absolute;
-        top: 10vh;
-        right: 10%;
-    font-size: 20px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-bottom: 2px;
-    background: #fff;
-    color: #171717;
-    transition: 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.btn.inactive {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.close {
+    top: 10vh;
+    right: 10%;
+}
+
+#left {
+    top: 50vh;
+    left: 10%;
+}
+
+#right {
+    top: 50vh;
+    right: 10%;
 }
 
 .close:hover {
     cursor: pointer;
-    background: lightgray;
-    color: black;
+    background-color: #333;
+    color: #fff;
 }
 
-#btn {
-    margin-top: 25px;
-    width: 120px;
-    height: 38px;
-    border: 2px solid #fff;
-    background-color: #171717;
-    color: var(--bg-link);
-    transition: 0.6s ease-in-out;
-}
-
-#btn:hover {
-    background: var(--overlay-bg);
-    color: #333;
+.btn:hover {
     cursor: pointer;
-    border: 2px solid #333;
+    background-color: #333;
+    color: #fff;
 }
-
-#btn1 {
-    position: absolute;
-        top: 50vh;
-        left: 12%;
-    background-color: rgba(0, 0, 0, 0.7);
-    font-size: 20px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-bottom: 2px;
-    color: grey;
-    border: none;
-    transition: .3s ease-in;
-    z-index:10;
-}
-
-#btn2 {
-    position: absolute;
-        top: 50vh;
-        right: 12%;
-    background-color:rgba(0, 0, 0, 0.7);
-    font-size: 20px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-bottom: 2px;
-    color: grey;
-    border: none;
-    transition: .3s ease-in;
-    z-index: 3;
-}
-
-#btn1:hover{cursor: pointer;color: #fff;}
-
-#btn2:hover{ cursor: pointer; color: #fff;}
 
 /* Media query */
 @media screen and (max-width: 60em) {
-    .gallery {
+    .gallery-grid {
         grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        grid-template-rows: repeat(8, 300px)
+    }
+    .lightbox-img {
+        width: 330px;
+        height: 300px;
     }
 }
