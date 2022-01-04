@@ -234,7 +234,7 @@ body {
     transition: 500ms;
     opacity: 0;
     z-index: -1;
-    pointer-events: none;
+    touch-action: manipulation;
 }
 
 /* Add and remove css class directly from previous css defined class */
